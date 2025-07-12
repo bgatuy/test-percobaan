@@ -44,7 +44,7 @@ body.dark-mode .content-box {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background-color: #fff;
+  background-color: #ccc;
   font-weight: bold;
   flex-wrap: wrap;
 }
