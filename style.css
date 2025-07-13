@@ -363,7 +363,7 @@ body.dark-mode .upload-label {
 }
 
 input[type="date"] {
-  padding: 5px 7px;
+  padding: 5px;
   font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
