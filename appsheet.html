@@ -120,6 +120,9 @@
   <button id="copyBtn">Copy</button>
 
   <script>
+  // === Ini wajib di awal, agar iPhone mau tanggapin active ===
+  document.addEventListener("touchstart", () => {}, true);
+
   document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggleModeBtn");
     const toggleIcon = document.getElementById("toggleIcon");
@@ -166,6 +169,14 @@
       if (href === currentPage) {
         link.classList.add("active");
       }
+
+      // === Tambahkan efek aktif manual di iOS (touchstart & touchend)
+      link.addEventListener("touchstart", () => {
+        link.classList.add("active-touch");
+      });
+      link.addEventListener("touchend", () => {
+        setTimeout(() => link.classList.remove("active-touch"), 150);
+      });
     });
 
     // === Reset nav (khusus mobile) saat pertama load

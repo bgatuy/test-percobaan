@@ -119,6 +119,9 @@
 
   <!-- Script -->
   <script>
+  // === Ini wajib di awal, agar iPhone mau tanggapin active ===
+  document.addEventListener("touchstart", () => {}, true);
+
   document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggleModeBtn");
     const toggleIcon = document.getElementById("toggleIcon");
@@ -165,6 +168,14 @@
       if (href === currentPage) {
         link.classList.add("active");
       }
+
+      // === Tambahkan efek aktif manual di iOS (touchstart & touchend)
+      link.addEventListener("touchstart", () => {
+        link.classList.add("active-touch");
+      });
+      link.addEventListener("touchend", () => {
+        setTimeout(() => link.classList.remove("active-touch"), 150);
+      });
     });
 
     // === Reset nav (khusus mobile) saat pertama load
@@ -187,6 +198,7 @@
     });
   });
 </script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
   <script src="script_extract.js"></script>
