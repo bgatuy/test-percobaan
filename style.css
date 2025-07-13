@@ -185,8 +185,8 @@ body.dark-mode .upload-label {
 /** === TOGGLE BUTTON === */
 #toggleModeBtn {
   position: fixed;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   font-size: 20px;
   top: 25px;
   right: 30px;
