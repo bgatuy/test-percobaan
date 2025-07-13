@@ -30,7 +30,7 @@ body.dark-mode .content-box {
 #menuToggle {
     display: block;
     position: fixed;
-    top: 20px;
+    top: 25px;
     left: 30px;
     z-index: 1000;
     background: none;
@@ -550,7 +550,7 @@ select {
     padding: 10px 10px;
     border-radius: 10px;
     background-color: #f8f8f8;
-    top: 75px;
+    top: 70px;
     left: 30px;
     right: 35px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
