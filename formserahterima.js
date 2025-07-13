@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fileInput.addEventListener("change", () => {
       const jumlah = fileInput.files.length;
       if (jumlah > 0) {
-        fileInfo.style.display = "inline";
+        fileInfo.style.display = "block";
 document.getElementById("fileCountText").textContent = `${jumlah} file dipilih`;
       }
     });

@@ -387,10 +387,8 @@ input[type="date"] {
 
 /* File info next to upload button */
 #fileInfo {
-  margin-left: 8px;
   font-size: 14px;
   color: #444;
-  display: block;
 }
 
 /** === BUTTONS === */
