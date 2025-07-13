@@ -651,6 +651,10 @@ select {
     font-size: 14px;
   }
 
+  input[type="date"] {
+    flex-direction: column;
+  }
+
  #fileList {
   width: 100%;
   max-width: 100%;
@@ -663,7 +667,7 @@ select {
   word-break: break-word;
   overflow-wrap: anywhere;
   line-height: 1.4;
-}
+  }
 
  /* Preview & TTD Table di versi HP */
   #previewTable,
