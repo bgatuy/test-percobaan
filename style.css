@@ -59,150 +59,6 @@ body.dark-mode .content-box {
   transition: border 0.3s ease;
 }
 
-/* === DESKTOP STYLE === */
-@media (min-width: 768px) {
-  #mainNav {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 60%;
-    margin: 40px auto 10px auto;
-    padding: 10px 0px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(255, 8, 8, 0.05);
-    background-color: #ffffff;
-    justify-content: center;
-    border: 3px solid #ccc;
-  }
-
-  #mainNav a {
-    padding: 10px 16px;
-    font-size: 15px;
-    color: #0077cc;
-    transition: background-color 0.2s ease, border 0.2s ease;
-  }
-
-  #mainNav a:hover {
-    background-color: #0077cc;
-    color: white;
-    border-radius: 10px 30px;
-  }
-
-  #mainNav a.active {
-    background-color: #0077cc;
-    color: white;
-    border-radius: 10px 30px;
-  }
-
-  body.dark-mode #mainNav {
-    background-color: #1e1e1e;
-    border-color: #444;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
-  }
-
-  body.dark-mode #mainNav a {
-    color: #f0f0f0;
-  }
-
-  body.dark-mode #mainNav a:hover {
-    background-color: #0077cc;
-  }
-
-  body.dark-mode #mainNav a.active {
-    background-color: #0077cc;
-    color: white;
-  }
-
-  #menuToggle {
-    display: none;
-  }
-
-  #mainNav.hidden {
-    display: flex !important;
-  }
-}
-
-/* === MOBILE STYLE === */
-@media (max-width: 767px) {
-  #mainNav {
-    flex-direction: column;
-    position: fixed;
-    gap: 5px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-    top: 70px;
-    left: 30px;
-    right: 35px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    display: none;
-    border: 1px solid #ccc;
-  }
-
-  #mainNav a {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 14px;
-    border-bottom: 2px solid #ccc;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  #mainNav.hidden {
-    display: none;
-  }
-
-  #mainNav.show {
-    display: flex;
-  }
-
-  body.dark-mode #mainNav {
-    background-color: #1f1f1f;
-    border-color: #444;
-  }
-
-  body.dark-mode #mainNav a {
-    color: #f0f0f0;
-    border-color: #444;
-  }
-
-  #mainNav a:active {
-    background-color: #e0e0e0;
-    border-radius: 6px;
-    transform: scale(0.96);
-  }
-
-  body.dark-mode #mainNav a:active {
-    background-color: #0077cc;
-    border-radius: 6px;
-    transform: scale(0.96);
-  }
-
-  #menuToggle:active {
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    transform: scale(0.96);
-  }
-  body.dark-mode #menuToggle:active {
-    background-color: #0077cc;
-    border-radius: 8px;
-    transform: scale(0.96);
-  }
-}
-
-/* Efek sentuhan aktif manual di iOS */
-#mainNav a.active-touch {
-  background-color: #e0e0e0;
-  transform: scale(0.96);
-  border-radius: 6px;
-}
-
-body.dark-mode #mainNav a.active-touch {
-  background-color: #0077cc;
-  color: white;
-}
-
-
 /** === HEADINGS === */
 h1 {
   display: flex;
@@ -283,7 +139,7 @@ input[type="file"] {
   transition: background-color 0.2s ease;
 }
 
-#copyBtn:hover {
+#copyBtn:active {
   background-color: #00b248;
 }
 
@@ -411,8 +267,8 @@ button,
   transition: background-color 0.2s ease;
 }
 
-button:hover,
-#downloadBtn:hover {
+button:active,
+#downloadBtn:active {
   background-color: #00b248;
 }
 
@@ -505,8 +361,8 @@ body.dark-mode #downloadBtn {
   border: none;
 }
 
-body.dark-mode button:hover,
-body.dark-mode #downloadBtn:hover {
+body.dark-mode button:active,
+body.dark-mode #downloadBtn:active {
   background-color: #00b248;
 }
 
@@ -615,8 +471,148 @@ select {
   overflow-y: auto;
 }
 
-/** === LAYOUT MOBILE === */
+/* === DESKTOP STYLE === */
+@media (min-width: 768px) {
+  #mainNav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 60%;
+    margin: 40px auto 10px auto;
+    padding: 10px 0px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(255, 8, 8, 0.05);
+    background-color: #ffffff;
+    justify-content: center;
+    border: 3px solid #ccc;
+  }
+
+  #mainNav a {
+    padding: 10px 16px;
+    font-size: 15px;
+    color: #0077cc;
+    transition: background-color 0.2s ease, border 0.2s ease;
+  }
+
+  #mainNav a:hover {
+    background-color: #0077cc;
+    color: white;
+    border-radius: 10px 30px;
+  }
+
+  #mainNav a.active {
+    background-color: #0077cc;
+    color: white;
+    border-radius: 10px 30px;
+  }
+
+  body.dark-mode #mainNav {
+    background-color: #1e1e1e;
+    border-color: #444;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  }
+
+  body.dark-mode #mainNav a {
+    color: #f0f0f0;
+  }
+
+  body.dark-mode #mainNav a:hover {
+    background-color: #0077cc;
+  }
+
+  body.dark-mode #mainNav a.active {
+    background-color: #0077cc;
+    color: white;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #mainNav.hidden {
+    display: flex !important;
+  }
+}
+
+/* === MOBILE STYLE === */
 @media (max-width: 768px) {
+  #mainNav {
+    flex-direction: column;
+    position: fixed;
+    gap: 5px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    top: 70px;
+    left: 30px;
+    right: 35px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: none;
+    border: 1px solid #ccc;
+  }
+
+  #mainNav a {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 2px solid #ccc;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #mainNav.hidden {
+    display: none;
+  }
+
+  #mainNav.show {
+    display: flex;
+  }
+
+  body.dark-mode #mainNav {
+    background-color: #1f1f1f;
+    border-color: #444;
+  }
+
+  body.dark-mode #mainNav a {
+    color: #f0f0f0;
+    border-color: #444;
+  }
+
+  #mainNav a:active {
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    transform: scale(0.96);
+  }
+
+  body.dark-mode #mainNav a:active {
+    background-color: #0077cc;
+    border-radius: 6px;
+    transform: scale(0.96);
+  }
+
+  #menuToggle:active {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    transform: scale(0.96);
+  }
+  body.dark-mode #menuToggle:active {
+    background-color: #0077cc;
+    border-radius: 8px;
+    transform: scale(0.96);
+  }
+
+  /* Efek sentuhan aktif manual di iOS */
+  #mainNav a.active-touch {
+  background-color: #e0e0e0;
+  transform: scale(0.96);
+  border-radius: 6px;
+  }
+
+  body.dark-mode #mainNav a.active-touch {
+  background-color: #0077cc;
+  color: white;
+  }
+
   .content-box {
     padding: 20px 20px;
     margin: 80px auto;
@@ -670,7 +666,7 @@ select {
 }
 
  /* Preview & TTD Table di versi HP */
-   #previewTable,
+  #previewTable,
   #ttdTable {
     width: 100%;
     table-layout: fixed; /* Biar bisa atur width tiap kolom */
